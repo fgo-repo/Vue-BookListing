@@ -16,7 +16,11 @@ export default {
             bookAuthor: ''
         }
     },
-    methods: { }
+    methods: { 
+        bookSubmit(bookTitle, bookAuthor) {
+            
+        }
+    }
 }
 </script>
 
