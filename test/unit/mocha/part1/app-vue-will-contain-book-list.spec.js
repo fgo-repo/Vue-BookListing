@@ -26,6 +26,11 @@ describe('App.vue', () => {
 
     // Test for correct import statement
     const ast = esprima.parse(script[0].childNodes[0].value, { sourceType: 'module' });
+    let importDeclaration = esquery(ast, 'ImportDeclaration');
+
+    assert(importDeclaration.length > 0, "The App component does not contain an import statement");
+    assert(importDeclaration[0].specifiers[0].local.name == 'BookList', 'App.vue isn\'t importing a class named `BookList`');
+
     let results = esquery(ast, 'ImportDeclaration[source.value="./components/BookList"]');
     assert(results.length > 0, '`./components/BookList` was not imported');
 
