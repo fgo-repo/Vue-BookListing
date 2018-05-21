@@ -27,6 +27,9 @@ export default {
         BookItem,
         BookForm
     }, methods: {
+        appendBook(bookTitle, bookAuthor) {
+            
+        }
     }
 }
 </script>
