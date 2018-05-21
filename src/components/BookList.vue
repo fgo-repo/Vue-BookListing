@@ -26,6 +26,7 @@ export default {
     }, components: {
         BookItem,
         BookForm
+    }, methods: {
     }
 }
 </script>
