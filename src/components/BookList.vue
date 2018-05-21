@@ -1,6 +1,11 @@
 <template>
     <div>
         <h1>{{ title }}</h1>
+        <ul>
+            <li>book 1</li>
+            <li>book 2</li>
+            <li>book 3</li>
+        </ul>
     </div>
 </template>
 
