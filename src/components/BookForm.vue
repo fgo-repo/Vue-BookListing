@@ -15,7 +15,8 @@ export default {
             bookTitle: '',
             bookAuthor: ''
         }
-    }
+    },
+    methods: { }
 }
 </script>
 
