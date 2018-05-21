@@ -43,12 +43,12 @@ describe('BookForm.vue', () => {
         assert(false, 'You need to add the submit event with the `v-on` tag.');
       }
     } else {
-      assert(results.outerHTML.includes('submit.prevent'), 'The `form` tag in the BookForm template does not include `v-on:submit.prevent`.');
+      assert(results.outerHTML.includes('submit.prevent'), 'The `form` tag in the BookForm template does not include `v-on\:submit.prevent`.');
     }
 
     let re = /bookSubmit\(bookTitle\s*\,\s*bookAuthor\)/
     let match = results.outerHTML.match(re)
-    assert(match != null && match.length == 1, 'The `v-on:submit.prevent` called in BookForm\'s `form` tag does not call the `bookSubmit()` method');
+    assert(match != null && match.length == 1, 'The `v-on\:submit.prevent` called in BookForm\'s `form` tag does not call the `bookSubmit()` method');
     
   });
 });
